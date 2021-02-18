@@ -48,6 +48,10 @@ function change() {
     document.getElementById("first").innerHTML = random1.name
     document.getElementById("second").innerHTML = random2.name
     document.getElementById("third").innerHTML = random3.name
+
+    Columns[0].style.backgroundImage = "url('" + random1.photo + "')"
+    Columns[1].style.backgroundImage = "url('" + random2.photo + "')"
+    Columns[2].style.backgroundImage = "url('" + random3.photo + "')"
 }
 
 // This happens when a column is clicked. Parameter specifies which column was clicked.
