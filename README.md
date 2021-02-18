@@ -7,7 +7,7 @@ The game is pretty simple, there is no backend. You need a JSON with names and c
 Due to the fact this is client-side only we need to have data hardcoded. It is done in `data.js` file.
 
 This is how the `data.js` should look like:
-``javascript
+```javascript
 data = `
 [
   {
@@ -23,15 +23,16 @@ data = `
     "photo": "/photos/3.jpg"
   }
 ]`
-``
+```
 *You need at least 3 people for it to work*. The more people you have there, the better. JavaScript gets 3 random people from the json and it shows them in the html file.
 
 Then, you click on the person you want to f#ck, then marry, then kill. When the kill animation ends, another 3 people are chosen randomly and shown on screen. The game lasts forever.
 
 Things to do:
-..* Add changing photos to script
-..* Two gamemodes based on gender
-..* Mobile improvements
+- Add changing photos to script
+- Change kill icon (make path thinner, so that it matches f#ck and marry icons)
+- Two gamemodes based on gender
+- Mobile improvements
 
 
 
