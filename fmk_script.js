@@ -127,3 +127,10 @@ function sleep(ms) {
   });
 
 window.onload = change()
+
+/*
+changes:
+-> include font
+-> norepeat photo on widescreens
+-> 
+*/

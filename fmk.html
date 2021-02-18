@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>FM.K</title>
+    <meta charset="utf-8" name="viewport" content="text/html">
+    <title>FMK</title>
 
     <!-- animate.css -->
     <link
@@ -11,12 +11,20 @@
     />
 
     <style>
+        @font-face {
+            font-family: "Montserrat-Bold";
+            src: url("fonts/Montserrat-Bold.ttf");
+        }
+        @font-face {
+            font-family: Montserrat-ExtraLight;
+            src: url("fonts/Montserrat-ExtraLight.ttf");
+        }
         html, body {
             margin: 0;
             height: 100%;
             color: #e2e2e2;
             background-color: #1a1a1a;
-            font-family: 'Montserrat';
+            font-family: 'Montserrat-ExtraLight';
         }
         .header{
             display: flex;
@@ -61,7 +69,8 @@
         }
 
         .flex-item:nth-child(1) {
-            background-image: url("icons/sample_photo.png");
+            background-image: url("photos/sample_photo.png");
+            background-position: center top;
             width: 33.33%;
             height: 100%;
             text-align: center;
@@ -78,7 +87,8 @@
             }
 
         .flex-item:nth-child(2) {
-            background-image: url("icons/sample_photo.png");
+            background-image: url("photos/sample_photo.png");
+            background-position: center top;
             width: 33.33%;
             height: 100%;
             text-align: center;
@@ -95,7 +105,8 @@
             }
 
         .flex-item:nth-child(3) {
-            background-image: url("icons/sample_photo.png");
+            background-image: url("photos/sample_photo.png");
+            background-position: center top;
             width: 33.33%;
             height: 100%;
             text-align: center;
@@ -170,7 +181,7 @@
                 <img class="icon" src="icons/fuck.svg">
             </div>
 
-            <p id="first" class="subtext">Joanna Pietrzyk</p>
+            <p id="first" class="subtext"></p>
 
         </div>
         
@@ -180,7 +191,7 @@
                 <img class="icon" src="icons/fuck.svg">
             </div>
 
-            <p id="second" class="subtext">Joanna Pietrzyk</p>
+            <p id="second" class="subtext"></p>
 
         </div>
         
@@ -190,7 +201,7 @@
                 <img class="icon" src="icons/fuck.svg">
             </div>
 
-            <p id="third" class="subtext">Joanna Pietrzyk</p>
+            <p id="third" class="subtext"></p>
 
         </div>
 
