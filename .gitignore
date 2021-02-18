@@ -1,0 +1,8 @@
+# data files
+girls.csv
+girls.json
+boys.csv
+boys.json
+
+# photos
+*.jpg
