@@ -1,7 +1,8 @@
 // FMK Script
 
 // JSON Data
-var obj = JSON.parse('{ "1": "Agata Bobrowska", "2": "Agata Gałus", "3": "Agata Latacz", "4": "Agnieszka Pałczak", "5": "Aleksandra Michalik", "6": "Aleksandra Werkowska", "7": "Aneta Orlik", "8": "Anna Musiałkiewicz", "9": "Anna Schmidt", "10": "Ela Chmielarz", "11": "Gabriela Szkudlarek", "12": "Jagoda Wierzbińska", "13": "Joanna Pietrzyk", "14": "Julia Gębska", "15": "Julia Szymańska", "16": "Julia Tatarynowicz", "17": "Karolina Kwiecień", "18": "Kinga Foksińska", "19": "Kinga Krawczyk", "20": "Magdalena Odziemek", "21": "Magdalena Strent", "22": "Magdalena Strojek", "23": "Malwina Bytner", "24": "Martyna Adamczyk", "25": "Martyna Czuczwara", "26": "Natalia Czyżyk", "27": "Natalia Szymanek", "28": "Ula Kulon", "29": "Weronika Jagiełowicz", "30": "Weronika Moździerz", "31": "Weronika Najda", "32": "Zoriana Szumada", "33": "Zuzanna Warchoł" }')
+var obj = JSON.parse(data) //from data.js
+console.log(obj)
 
 // Determines the stage of game (0=F, 1=M, 2=K)
 var mode = 0
@@ -22,8 +23,10 @@ document.getElementById("col2").addEventListener("click", function() { click(2);
 
 // Getting random person from JSON
 function randomElement(obj) {
-    var keys = Object.keys(obj)
-    return obj[keys[ keys.length * Math.random() << 0]]
+    var length = obj.length
+    var randInt = Math.floor(Math.random() * length)
+    console.log(randInt)
+    return obj[randInt]
 }
 
 // Generates new set of 3 people 
@@ -42,20 +45,25 @@ function change() {
     }
 
     // change captions
-    document.getElementById("first").innerHTML = random1
-    document.getElementById("second").innerHTML = random2
-    document.getElementById("third").innerHTML = random3
+    document.getElementById("first").innerHTML = random1.name
+    document.getElementById("second").innerHTML = random2.name
+    document.getElementById("third").innerHTML = random3.name
 }
 
+// This happens when a column is clicked. Parameter specifies which column was clicked.
 function click(pos) {
     
     // console.log("clicked") // uncomment for debugging
 
+    // Fuck state (initial)
     if (mode == 0) {
-        mode = 1
-        lastClicked = pos
-        Overlays[pos].style.visibility = "visible"
+        mode = 1 // change to Marry Mode (for further clicks)
+        lastClicked = pos // save which position was clicked
+        // Normally, the overlay is visible only on hover. After click it is visible all the time
+        Overlays[pos].style.visibility = "visible" 
+        // UX click confirmation animation
         animateCSS(Icons[pos], "heartBeat")
+        // change overlay BG color to marry mode
         for (var i=0; i<3; i++) {
             if (i!=pos) {
                 Overlays[i].style.backgroundColor = "rgba(252, 15, 192, 0.4)"
@@ -65,12 +73,14 @@ function click(pos) {
         }
 
     } else if (mode == 1) {
+        // blocks clicks on the same column
         if (pos == lastClicked){
             return
         }
         mode = 2
-        _lastClicked = pos
+        _lastClicked = pos // save which position was clicked
         
+        // same thing as in mode == 0
         Overlays[pos].style.visibility = "visible"
         animateCSS(Icons[pos], "heartBeat")
         for (var i=0; i<3; i++) {
@@ -83,6 +93,7 @@ function click(pos) {
 
 
     } else {
+        // blocks clicks on the same column and when animation
         if (pos == lastClicked || pos == _lastClicked || finished == false){
             return
         }
@@ -103,11 +114,8 @@ function click(pos) {
     }       
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
 
-// animate.css function
+// animate.css function for adding and auto-removing animation classes
   const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
@@ -126,11 +134,5 @@ function sleep(ms) {
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
+// Initial 3 people generatio
 window.onload = change()
-
-/*
-changes:
--> include font
--> norepeat photo on widescreens
--> 
-*/
