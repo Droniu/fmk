@@ -1,8 +1,6 @@
 # data files
-girls.csv
-girls.json
+data.js
 boys.csv
-boys.json
 
 # photos
 *.jpg
