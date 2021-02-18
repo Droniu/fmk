@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>FM.K</title>
+
+    <!-- animate.css -->
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            color: #e2e2e2;
+            background-color: #1a1a1a;
+            font-family: 'Montserrat';
+        }
+        .header{
+            display: flex;
+            height: 10%;
+            font-size: 16pt;
+            line-height: 100%;;
+            text-align: left;
+            margin: 0;
+            font-family: 'Montserrat-Bold';
+        } 
+        div#logo{
+            display: inline-flex;
+            vertical-align: middle;
+            align-items: center;
+            padding-left: 20px;
+        }
+        .flex-container {
+            width: 100%;
+            height: 90%;
+    
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+        }
+        .flex-item{
+            background-color: rgb(32,32,32);
+        }
+
+        .flex-item:nth-child(1) {
+            background-image: url("icons/sample_photo.png");
+            width: 33.33%;
+            height: 100%;
+            text-align: center;
+            
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: stretch;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+            }
+
+        .flex-item:nth-child(2) {
+            background-image: url("icons/sample_photo.png");
+            width: 33.33%;
+            height: 100%;
+            text-align: center;
+
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            }
+
+        .flex-item:nth-child(3) {
+            background-image: url("icons/sample_photo.png");
+            width: 33.33%;
+            height: 100%;
+            text-align: center;
+
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            }
+        
+        .flex-item:hover .overlay {
+            visibility: visible !important;
+
+        }
+        /*
+        Colours:
+        
+        Fuck rgba(38, 166, 91, 0.4)
+        Marry rgba(252, 15, 192, 0.4)
+        Kill rgba(27, 27, 27, 0.4)
+
+        */
+
+        .overlay{
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+
+            background-color: rgba(38, 166, 91, 0.4);
+        }
+        .icon {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            width: 15%;
+            top: 50%;
+
+        }
+        .subtext {
+            font-size: 20pt;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            position: relative;
+            top: -13%;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+            <div id="logo">
+                FUCK </br> MARRY </br> KILL
+            </div>
+
+    </div>
+
+
+    <div class="flex-container">
+        
+        <div id ="col0" class="flex-item">
+            
+            <div id="o0" class="overlay">
+                <img class="icon" src="icons/fuck.svg">
+            </div>
+
+            <p id="first" class="subtext">Joanna Pietrzyk</p>
+
+        </div>
+        
+        <div id ="col1" class="flex-item">
+            
+            <div id="o1" class="overlay">
+                <img class="icon" src="icons/fuck.svg">
+            </div>
+
+            <p id="second" class="subtext">Joanna Pietrzyk</p>
+
+        </div>
+        
+        <div id ="col2" class="flex-item">
+            
+            <div id="o2" class="overlay">
+                <img class="icon" src="icons/fuck.svg">
+            </div>
+
+            <p id="third" class="subtext">Joanna Pietrzyk</p>
+
+        </div>
+
+    </div>
+
+    <script src="fmk_script.js"></script>
+
+</body>
+</html> 
