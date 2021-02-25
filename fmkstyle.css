@@ -61,6 +61,7 @@ div#logo{
 }
 .flex-item{
     background-color: rgb(32,32,32);
+    background-repeat: no-repeat;
 }
 
 .flex-item:nth-child(1) {

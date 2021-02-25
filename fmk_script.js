@@ -52,11 +52,15 @@ function change() {
     Columns[0].style.backgroundImage = "url('" + random1.photo + "')"
     Columns[1].style.backgroundImage = "url('" + random2.photo + "')"
     Columns[2].style.backgroundImage = "url('" + random3.photo + "')"
+    finished = false
+    animateCSS(Columns[0], "zoomIn")
+    animateCSS(Columns[1], "zoomIn")
+    animateCSS(Columns[2], "zoomIn").then(() => {finished = true})
 }
-
 // This happens when a column is clicked. Parameter specifies which column was clicked.
 function click(pos) {
     
+    if (finished == false) return
     // console.log("clicked") // uncomment for debugging
 
     // Fuck state (initial)
