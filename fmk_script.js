@@ -61,7 +61,6 @@ function change() {
 function click(pos) {
     
     if (finished == false) return
-    // console.log("clicked") // uncomment for debugging
 
     // Fuck state (initial)
     if (mode == 0) {
