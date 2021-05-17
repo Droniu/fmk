@@ -65,7 +65,7 @@ div#logo{
 }
 
 .flex-item:nth-child(1) {
-    background-image: url("photos/sample_photo.png");
+    background-image: url("fmkphotos/sample_photo.png");
     background-position: center top;
     width: 33.33%;
     height: 100%;
@@ -83,7 +83,7 @@ div#logo{
     }
 
 .flex-item:nth-child(2) {
-    background-image: url("photos/sample_photo.png");
+    background-image: url("fmkphotos/sample_photo.png");
     background-position: center top;
     width: 33.33%;
     height: 100%;
@@ -101,7 +101,7 @@ div#logo{
     }
 
 .flex-item:nth-child(3) {
-    background-image: url("photos/sample_photo.png");
+    background-image: url("fmkphotos/sample_photo.png");
     background-position: center top;
     width: 33.33%;
     height: 100%;
