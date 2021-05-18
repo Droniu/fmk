@@ -1,6 +1,6 @@
 # F#ck marry kill web app
 
-_Version 1.0 beta_
+_Version 1.2 beta_
 
 The game is pretty simple, there is no backend. You need a JSON with names and couple of photos. 
 
