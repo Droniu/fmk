@@ -29,16 +29,16 @@ data = `
 Then, you click on the person you want to f#ck, then marry, then kill. When the kill animation ends, another 3 people are chosen randomly and shown on screen. The game lasts forever.
 
 What's new:
-- seperation of html and css
-- photos are now visible
-- icons animate on click
+* seperation of html and css
+* photos are now visible
+* icons animate on click
 
 Things to do:
-- Change kill icon (make path thinner, so that it matches f#ck and marry icons)
-- Two gamemodes based on gender
-- Mobile improvements
-⋅⋅- Either do horizontal layout (probably preferred), or extend the photo divs to the bottom). Anyhow think about mobile UI.
-⋅⋅- :hover stays on last clicked (touched) person, so after generation of a new set of three people one of them is highlighted in green. Needs to be fixed.
+* Change kill icon (make path thinner, so that it matches f#ck and marry icons)
+* Two gamemodes based on gender
+* Mobile improvements
+⋅⋅* Either do horizontal layout (probably preferred), or extend the photo divs to the bottom). Anyhow think about mobile UI.
+⋅⋅* :hover stays on last clicked (touched) person, so after generation of a new set of three people one of them is highlighted in green. Needs to be fixed.
 
 
 Used fonts:
