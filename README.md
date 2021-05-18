@@ -37,6 +37,8 @@ Things to do:
 - Change kill icon (make path thinner, so that it matches f#ck and marry icons)
 - Two gamemodes based on gender
 - Mobile improvements
+⋅⋅- Either do horizontal layout (probably preferred), or extend the photo divs to the bottom). Anyhow think about mobile UI.
+⋅⋅- :hover stays on last clicked (touched) person, so after generation of a new set of three people one of them is highlighted in green. Needs to be fixed.
 
 
 Used fonts:
