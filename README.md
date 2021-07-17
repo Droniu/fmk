@@ -2,7 +2,7 @@
 
 _Version 1.2 beta_
 
-The game is pretty simple, there is no backend. You need a JSON with names and couple of photos. 
+The game is pretty simple, instead of API response we use static JSON with names and couple of photos. 
 
 Due to the fact this is client-side only we need to have data hardcoded. It is done in `data.js` file.
 
