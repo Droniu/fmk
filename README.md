@@ -1,8 +1,8 @@
 # F#ck marry kill web app
 
-_Version 1.0 beta_
+_Version 1.2 beta_
 
-The game is pretty simple, there is no backend. You need a JSON with names and couple of photos. 
+The game is pretty simple, instead of API response we use static JSON with names and couple of photos. 
 
 Due to the fact this is client-side only we need to have data hardcoded. It is done in `data.js` file.
 
@@ -29,14 +29,16 @@ data = `
 Then, you click on the person you want to f#ck, then marry, then kill. When the kill animation ends, another 3 people are chosen randomly and shown on screen. The game lasts forever.
 
 What's new:
-- seperation of html and css
-- photos are now visible
-- icons animate on click
+* seperation of html and css
+* photos are now visible
+* icons animate on click
 
 Things to do:
-- Change kill icon (make path thinner, so that it matches f#ck and marry icons)
-- Two gamemodes based on gender
-- Mobile improvements
+* Change kill icon (make path thinner, so that it matches f#ck and marry icons)
+* Two gamemodes based on gender
+* Mobile improvements:
+  * Either do horizontal layout (probably preferred), or extend the photo divs to the bottom. Anyhow think about mobile UI.
+  * :hover stays on last clicked (touched) person, so after generation of a new set of three people one of them is highlighted in green. Needs to be fixed.
 
 
 Used fonts:
@@ -45,3 +47,5 @@ Montserrat-ExtraLight (people captions)
 
 Used libraries:
 [Animate.css](https://animate.style/)
+
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
